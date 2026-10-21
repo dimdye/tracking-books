@@ -3,7 +3,7 @@
  * not here — this only caches the app itself so it opens without a connection.
  * Bump VERSION whenever you upload a new index.html.
  */
-const VERSION = "marginalia-v4";
+const VERSION = "marginalia-v5";
 const SHELL = ["./", "./index.html", "./manifest.json", "./icon-192.png", "./icon-512.png", "./apple-touch-icon.png", "./favicon-32.png"];
 
 self.addEventListener("install", (event) => {

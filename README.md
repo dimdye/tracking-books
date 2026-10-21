@@ -61,7 +61,7 @@ it, including on a new phone.
 ## Updating the app later
 
 Replace `index.html` with the new version. In `service-worker.js`, change
-`marginalia-v4` to `marginalia-v5` (and so on), then upload both files. Your
+`marginalia-v5` to `marginalia-v6` (and so on), then upload both files. Your
 books aren't touched.
 
 ## Already installed the earlier version?
