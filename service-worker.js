@@ -1,10 +1,10 @@
 /*
- * Ex Libris offline support. Your books are stored on the phone (IndexedDB),
+ * Marginalia offline support. Your books are stored on the phone (IndexedDB),
  * not here — this only caches the app itself so it opens without a connection.
  * Bump VERSION whenever you upload a new index.html.
  */
-const VERSION = "ex-libris-v1";
-const SHELL = ["./", "./index.html", "./manifest.json", "./icon-192.png", "./icon-512.png", "./apple-touch-icon.png"];
+const VERSION = "marginalia-v3";
+const SHELL = ["./", "./index.html", "./manifest.json", "./icon-192.png", "./icon-512.png", "./apple-touch-icon.png", "./favicon-32.png"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(

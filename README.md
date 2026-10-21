@@ -1,13 +1,13 @@
-# Ex Libris: putting it on your Home Screen
+# Marginalia: putting it on your Home Screen
 
-Ex Libris is a plain web app: these 7 files and nothing else. Your books are
+Marginalia is a plain web app: these 8 files and nothing else. Your books are
 saved only on your phone, inside the app. The only things it ever sends over
 the internet are book lookups (to Google Books and Open Library) and font and
 cover-image downloads.
 
 Files:
 `index.html`, `manifest.json`, `service-worker.js`, `icon-192.png`,
-`icon-512.png`, `icon-maskable-512.png`, `apple-touch-icon.png`
+`icon-512.png`, `icon-maskable-512.png`, `apple-touch-icon.png`, `favicon-32.png`
 
 It needs to live at an `https://` address for "Add to Home Screen", the camera
 scanner and offline use to work. Pick one of the two options below.
@@ -16,16 +16,16 @@ scanner and offline use to work. Pick one of the two options below.
 
 1. In the Files app, tap the zip to unpack it.
 2. Go to github.com and sign in (or create a free account).
-3. Tap **+** → **New repository**. Name it `ex-libris`, keep it **Public**,
+3. Tap **+** → **New repository**. Name it `marginalia`, keep it **Public**,
    and create it.
-4. On the new repository page, tap **uploading an existing file**. Pick all 7
+4. On the new repository page, tap **uploading an existing file**. Pick all 8
    files from the unpacked folder (the README is optional) and tap
    **Commit changes**.
 5. Go to **Settings** → **Pages**. Under "Build and deployment", set
    **Source: Deploy from a branch**, then **Branch: main**, folder
    **/ (root)**. Tap **Save**.
 6. Wait a minute or two. Your app is then at
-   `https://<your-username>.github.io/ex-libris/`
+   `https://<your-username>.github.io/marginalia/`
 
 Public here only means the app's code is visible. Your books are never
 uploaded anywhere.
@@ -33,7 +33,7 @@ uploaded anywhere.
 ## Option B: Firebase Hosting (like Books & Boba, needs a computer)
 
 1. At console.firebase.google.com, create a **new project** (for example
-   "ex-libris"). You don't need Firestore or Analytics.
+   "marginalia"). You don't need Firestore or Analytics.
 2. On your computer, in an empty folder containing these files, run:
    ```
    firebase login
@@ -46,7 +46,7 @@ uploaded anywhere.
 ## Add it to your Home Screen
 
 - **iPhone:** open the link in **Safari** → tap **Share** → **Add to Home
-  Screen**. From then on, always open Ex Libris from its icon. On iPhone, the
+  Screen**. From then on, always open Marginalia from its icon. On iPhone, the
   Home Screen app keeps its own library, separate from the Safari tab.
 - **Android:** open the link in **Chrome** → menu (⋮) → **Install app** or
   **Add to Home screen**.
@@ -61,5 +61,19 @@ it, including on a new phone.
 ## Updating the app later
 
 Replace `index.html` with the new version. In `service-worker.js`, change
-`ex-libris-v1` to `ex-libris-v2` (and so on), then upload both files. Your
+`marginalia-v3` to `marginalia-v4` (and so on), then upload both files. Your
 books aren't touched.
+
+## Already installed the earlier version?
+
+If you'd already set up the app under its first name, Ex Libris:
+
+1. Open the old app and use **⚙ → Export** to save a backup. On iPhone,
+   deleting a Home Screen app also deletes the library saved inside it, so
+   don't skip this step.
+2. Upload these files over the old ones, in the same place (same repository
+   or same Firebase project).
+3. Delete the old Ex Libris icon, then open the link in Safari and choose
+   **Add to Home Screen** again. You'll get the new name and icon.
+4. Open Marginalia from the new icon, then use **⚙ → Import** and pick the
+   backup file.
